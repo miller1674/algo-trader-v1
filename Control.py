@@ -1,7 +1,7 @@
 
 import datetime 
 from datetime import timedelta
-
+from money import *
 from stock import *
 
 
@@ -13,6 +13,7 @@ class Control:
     def __init__(self):
         self._portfolio=[]
         self._stock_list=[]
+        self._money=Money(10000)
     
     def launch(self):
         
@@ -70,6 +71,7 @@ class Control:
                     
                 if (curr_in==False):
                     port.append(stock[t])
+                    
                 
         else:
             port.append(stock[0])
@@ -88,4 +90,5 @@ class Control:
 
 f=Control()
 f.launch()
+
 
