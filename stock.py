@@ -11,11 +11,12 @@ class Stock:
         self._symbol = symbol
         temp=quandl.get("WIKI/"+(str(symbol)), end_date=currentDay, rows=1)
         self._currPrice=temp.Close[0]
+        self._moving_avg=0
 		
 		
 		
     def printStock(self):
-        print("This is the symbol "+self._symbol+" Curr Price:"+ str(self._currPrice)+" Moving Avg:"+ str(self._movingAvg))
+        print("This is the symbol "+self._symbol+" Curr Price:"+ str(self._currPrice)+" Moving Avg:"+ str(self._moving_avg))
 	
     def movingAvg(self, numDays, currentDay):
         temp=quandl.get("WIKI/"+self._symbol, end_date=currentDay ,rows=numDays)
@@ -23,7 +24,7 @@ class Stock:
         for y in range(0, numDays):
             sum+=temp.Close[y]
         move=sum/numDays
-        self._movingAvg=move
+        self._moving_avg=move/self._currPrice
 	
 		
 
