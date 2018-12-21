@@ -12,6 +12,7 @@ class Stock:
         temp=quandl.get("WIKI/"+(str(symbol)), end_date=currentDay, rows=1)
         self._currPrice=temp.Close[0]
         self._moving_avg=0
+        self._number_owned=0
 		
 		
 		

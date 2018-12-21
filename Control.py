@@ -27,10 +27,10 @@ class Control:
             for f in range(0, len(array)):
                 p=Stock(array[f], currDay)
                 p.movingAvg(30, currDay)
-                p.printStock()
+                #p.printStock()
                 stock_list.append(p)  
             self._stock_list=stock_list   
-            print(" ")
+            #print(" ")
             self.portfolio()
             self._portfolio[0].printStock()
             self._portfolio[1].printStock()
@@ -79,37 +79,6 @@ class Control:
         
         self._portfolio=port
         
-        
-        """
-        if (len(self._porfolio)!=0):
-        
-            if (stock1._symbol!=self._porfolio[0]._symbol and stock1._symbol!=self._porfolio[1]._symbol and stock1._symbol!=self._porfolio[2]._symbol):
-                port.append(stock1)
-            
-            if (stock2._symbol!=self._porfolio[0]._symbol and stock2._symbol!=self._porfolio[1]._symbol and stock2._symbol!=self._porfolio[2]._symbol):
-                port.append(stock2)
-                
-            if (stock3._symbol!=self._porfolio[0]._symbol and stock3._symbol!=self._porfolio[1]._symbol and stock3._symbol!=self._porfolio[2]._symbol):
-                port.append(stock3)
-            
-            rme=0
-            if (stock1._symbol!=port[rme]._symbol and stock2._symbol!=port[rme]._symbol and stock3._symbol!=port[rme]._symbol):
-                del port[rme]
-                rme=0
-            else:
-                rme=rme+1
-            if (stock1._symbol!=self._porfolio[1]._symbol and stock2._symbol!=self._porfolio[1]._symbol and stock3._symbol!=self._porfolio[1]._symbol):
-                del port[rme]
-                rme=0
-            else:
-                rme=rme+1
-            if (stock1._symbol!=self._porfolio[2]._symbol and stock2._symbol!=self._porfolio[2]._symbol and stock3._symbol!=self._porfolio[2]._symbol):
-                del port[rme]
-        """
-        
-            
-        #port.append(stock2)
-        #port.append(stock3)
         
        
         
