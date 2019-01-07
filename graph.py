@@ -14,10 +14,10 @@ class Graph:
         p=range(1,len(y)+1)
         plt.plot(p, y)
 
-        plt.xlabel('x label')
-        plt.ylabel('y label')
+        plt.xlabel('Weeks')
+        plt.ylabel('Percent Gain')
 
-        plt.title("Simple Plot")
+        plt.title("Trading Algo")
 
         plt.legend()
 
